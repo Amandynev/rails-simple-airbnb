@@ -1,5 +1,15 @@
-<h2><%= @flat.name %></h2>
-<p><%= @flat.address %></p>
-<p><%= @flat.description %></p>
-<p><%= @flat.price_per_night %></p>
-<p><%= @flat.number_of_guests %></p>
+<div class="container">
+   <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><strong><%=@flat.name%></strong></h5>
+          <p class="card-text"><%=@flat.description%></p>
+          <p class="card-info"><i class="fas fa-euro-sign"></i> <%=@flat.price_per_night%></p>
+          <p class="card-info"><i class="fas fa-user-friends"></i> <%=@flat.number_of_guests%></p>
+        </div>
+      <div class="card-body">
+        <a href="#" class="card-link"><%= link_to "Post a flat", new_flat_path,  class: "btn btn-primary" %></a>
+        <a href="#" class="card-link"><%= link_to "Post a flat", new_flat_path,  class: "btn btn-primary" %></a>
+    </div>
+  </div>
+</div>
